@@ -3,8 +3,8 @@ config = require 'config'
 
 if config.env is 'dev'
   assetLinks =
-    main: "http://talk.bi:#{config.webpackDevPort}/main.js"
-    vendor: "http://talk.bi:#{config.webpackDevPort}/vendor.js"
+    main: "http://localhost:#{config.webpackDevPort}/main.js"
+    vendor: "http://localhost:#{config.webpackDevPort}/vendor.js"
     style: null
 else
   assets = require '../packing/assets'

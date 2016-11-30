@@ -77,7 +77,7 @@ module.exports = React.createClass
 
     # caution: projectUrl in settings is based on http://talk.bi
     if TALK.env is 'dev'
-      projectsUrl = projectsUrl.replace 'http://talk.bi/v1', TALK.apiHost
+      projectsUrl = projectsUrl.replace 'http://localhost/v1', TALK.apiHost
 
     api.get(projectsUrl)
       .then (resp) =>

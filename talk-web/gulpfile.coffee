@@ -38,7 +38,7 @@ gulp.task 'webpack-dev', (cb) ->
   compiler = webpack (webpackDev info)
   server = new WebpackDevServer compiler, webpackServer
 
-  server.listen config.webpackDevPort, 'talk.bi', (err) ->
+  server.listen config.webpackDevPort, 'localhost', (err) ->
     if err?
       throw new gutil.PluginError("webpack-dev-server", err)
     gutil.log "[webpack-dev-server] is listening"

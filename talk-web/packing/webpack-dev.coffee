@@ -19,7 +19,7 @@ module.exports = (info) ->
   entry: {
     main: main,
     vendor: [
-      "webpack-dev-server/client?http://talk.bi:#{config.webpackDevPort}",
+      "webpack-dev-server/client?http://localhost:#{config.webpackDevPort}",
       'webpack/hot/dev-server'
       './client/vendor/primus'
       'actions-recorder', 'base-64', 'classnames', 'cookie_js', 'debounce'
@@ -41,7 +41,7 @@ module.exports = (info) ->
   delay: 50,
   output: {
     path: path.join info.__dirname, 'build' # build/ at project root
-    publicPath: "http://talk.bi:#{config.webpackDevPort}/",
+    publicPath: "http://localhost:#{config.webpackDevPort}/",
     filename: '[name].js'
   },
   module: {
